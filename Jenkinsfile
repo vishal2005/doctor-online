@@ -3,18 +3,23 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Maven Build') {
+stage('maven build') {
             steps {
-                sh 'mvn clean package'
+                sh "mvn clean package"
             }
         }
-        stage("Tomcat Dev Deploy"){
-            steps{
-                tomcatDeploy("172.31.30.174","ec2-user","tomcat-dev","doctor-online.war")
+       stage('tomcat deploy') {
+            steps {
+            
+            tomcatDeploy('172.31.32.232','ec2-user','tomcat-dev','doctor-online.war')
+       
             }
         }
+        
+        
     }
+
+    
     post {
       success {
         cleanWs()
