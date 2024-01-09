@@ -21,7 +21,7 @@ stage("Upload Artifacts"){
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
                   repository: 'doctor-release', 
-                  version: '1.3'
+                  version: '1.4'
             }
         }
     
