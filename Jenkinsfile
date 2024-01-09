@@ -1,4 +1,4 @@
-@Library("jhc-libs") _
+// @Library("jhc-libs") _
 
 pipeline {
     agent any
@@ -21,17 +21,17 @@ stage("Upload Artifacts"){
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
                   repository: 'doctor-online', 
-                  version: '1.3'
+                  version: '1.3-SNAPSHOT'
             }
         }
     
-       stage('tomcat deploy') {
-            steps {
+   //    stage('tomcat deploy') {
+     //       steps {
             
-            tomcatDeploy('172.31.32.232','ec2-user','tomcat-dev','doctor-online.war')
+       //     tomcatDeploy('172.31.32.232','ec2-user','tomcat-dev','doctor-online.war')
        
-            }
-        }
+         //   }
+       // }
         
         
     }
