@@ -20,7 +20,7 @@ stage("Upload Artifacts"){
                   nexusUrl: '172.31.12.199:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
-                  repository: 'do-release', 
+                  repository: 'doctor-online', 
                   version: '1.3'
             }
         }
